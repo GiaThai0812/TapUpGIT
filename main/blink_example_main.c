@@ -26,9 +26,12 @@ void app_main(void)
     int *p;
     int a[5]={1,2,3,4,5};
     p=a;
+    uint8_t t=10;
+    ESP_LOGI(TAG,"gia tri cua t: %u",t);
     ESP_LOGI(TAG,"giá trị trả về của sizeof: %d \n",sizeof(a));
     for(unsigned int i=0;i<(sizeof(a)/sizeof(int));i++){
         ESP_LOGI(TAG,"giá trị phần tử thứ %d là %u \n",i,*(p+i));
+    
     }
     while (1) {
         // ESP_LOGI(TAG, "Turning the LED %s!", s_led_state == true ? "ON" : "OFF");
